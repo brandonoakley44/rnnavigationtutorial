@@ -18,6 +18,8 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 
 import { DrawerContent } from './screens/DrawerContent';
 
+import RootStackScreen from './screens/RootStackScreen';
+
 import {
   SafeAreaView,
   ScrollView,
@@ -44,12 +46,13 @@ const Drawer = createDrawerNavigator();
 const App = () => {
   return (
     <NavigationContainer>
-      <Drawer.Navigator  drawerContent={props => <DrawerContent {...props} />} >
+      <RootStackScreen />
+      {/* <Drawer.Navigator  drawerContent={props => <DrawerContent {...props} />} >
         <Drawer.Screen name="HomeDrawer" component={MainTabScreen} />
         <Drawer.Screen name="SupportScreen" component={SupportScreen} />
         <Drawer.Screen name="SettingsScreen" component={SettingsScreen} />
         <Drawer.Screen name="BookmarkScreen" component={BookmarkScreen} />
-      </Drawer.Navigator>
+      </Drawer.Navigator> */}
       {/* <Stack.Navigator screenOptions={{
          headerStyle: {
           backgroundColor: '#009387',
